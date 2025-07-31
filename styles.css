@@ -1,4 +1,4 @@
-/* Base Styles */
+
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
@@ -58,7 +58,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
@@ -69,7 +69,6 @@ a {
   text-decoration: none;
 }
 
-/* Layout */
 .container {
   width: 100%;
   max-width: 1400px;
@@ -954,7 +953,7 @@ a {
   --ring: #8b5cf6;
 }
 
-/* Animations */
+
 .animate-fade-in {
   animation: fadeIn 0.8s ease forwards;
 }
@@ -1010,7 +1009,7 @@ a {
   }
 }
 
-/* Media Queries */
+
 @media (min-width: 640px) {
   .sm\:py-32 {
     padding-top: 8rem;
@@ -1201,25 +1200,25 @@ a {
 }
 
 .square-box {
-    width: 30px; /* Adjust the size as needed */
-    height: 30px; /* Adjust the size as needed */
+    width: 30px; 
+    height: 30px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ccc; /* Optional: Add a border */
-    border-radius: 4px; /* Optional: Add slight rounding */
-    background-color: white; /* Background color */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    background-color: white; 
+    transition: background-color 0.3s; 
 }
 
 .square-box:hover {
-    background-color: #f0f0f0; /* Change background on hover */
+    background-color: #f0f0f0; /
 }
 
 .calendar-days {
     display:grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 columns for the days */
-    gap: 0.2rem; /* Space between the buttons */
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.2rem; 
     padding: 1px;
     
 }
