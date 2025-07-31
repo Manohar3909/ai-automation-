@@ -19,11 +19,10 @@
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // These IDs correspond to the service and template you created
+         
             const serviceID = 'service_zhum4dn';
             const templateID = 'template_8iauyas';
-            
-            // Send the email
+    
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     alert('Email sent successfully!');
@@ -105,7 +104,7 @@
                         <div class="card md:col-span-1">
                             <div class="card-content p-4">
                                 <div class="calendar-container border rounded-md p-2">
-                                    <!-- Simple calendar UI -->
+                                
                                     <div class="calendar-header flex items-center justify-between mb-4">
                                         <button class="button button-ghost button-sm button-icon">
                                             <i class="icon icon-chevron-left"></i>
@@ -125,14 +124,14 @@
                                         <div>Sa</div>
                                     </div>
                                     <div class="calendar-days grid grid-cols-7 gap-1">
-                                        <!-- Previous month days -->
+                                   
                                         <button class="calendar-day square-box text-muted-foreground opacity-50">23</button>
                                         <button class="calendar-day square-box text-muted-foreground opacity-50">24</button>
                                         <button class="calendar-day square-box text-muted-foreground opacity-50">25</button>
                                         <button class="calendar-day square-box text-muted-foreground opacity-50">26</button>
                                         <button class="calendar-day square-box text-muted-foreground opacity-50">27</button>
                                         <button class="calendar-day square-box text-muted-foreground opacity-50">28</button>
-                                        <!-- Current month days -->
+                                      
                                         <button class="calendar-day square-box">1</button>
                                         <button class="calendar-day square-box">2</button>
                                         <button class="calendar-day square-box">3</button>
@@ -164,7 +163,7 @@
                                         <button class="calendar-day square-box">29</button>
                                         <button class="calendar-day square-box">30</button>
                                         <button class="calendar-day square-box">31</button>
-                                        <!-- Next month days -->
+                                      
                                         <button class="calendar-day square-box text-muted-foreground opacity-50">1</button>
                                         <button class="calendar-day square-box text-muted-foreground opacity-50">2</button>
                                         <button class="calendar-day square-box text-muted-foreground opacity-50">3</button>
