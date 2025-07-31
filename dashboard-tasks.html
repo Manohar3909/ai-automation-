@@ -19,11 +19,10 @@
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // These IDs correspond to the service and template you created
             const serviceID = 'service_zhum4dn';
             const templateID = 'template_8iauyas';
             
-            // Send the email
+     
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     alert('Email sent successfully!');
