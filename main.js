@@ -1,7 +1,6 @@
-// Set current year in footer
+
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
-// Handle smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -12,8 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop - 80, // Account for header height
-        behavior: 'smooth'
+        top: targetElement.offsetTop - 80, 
       });
     }
   });
