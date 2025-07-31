@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Task checkbox functionality
+
   const taskCheckboxes = document.querySelectorAll('.task-checkbox');
   
   taskCheckboxes.forEach(checkbox => {
@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.style.width = '100%';
       } else {
         taskTitle.classList.remove('line-through', 'text-muted-foreground');
-        // Reset to original progress
+      
         const originalProgress = taskItem.dataset.progress || '0';
         progressBar.style.width = `${originalProgress}%`;
       }
     });
   });
   
-  // Add new task functionality
+
   const newTaskInput = document.getElementById('new-task-input');
   const addTaskBtn = document.getElementById('add-task-btn');
   const tasksContainer = document.getElementById('tasks-container');
@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskTitle = newTaskInput.value.trim();
     if (!taskTitle) return;
     
-    // Create new task HTML
+  
     const newTaskId = Date.now();
-    const taskHTML = `
+    const taskHTML = 
       <div class="flex items-start p-4 hover:bg-muted/50 task-item" data-id="${newTaskId}">
         <div class="flex items-center gap-3 mr-3">
           <input type="checkbox" class="checkbox task-checkbox">
@@ -86,15 +86,15 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
       </div>
-    `;
+  ;
     
-    // Insert new task at the top
+  
     tasksContainer.insertAdjacentHTML('afterbegin', taskHTML);
     
-    // Clear input
+  
     newTaskInput.value = '';
     
-    // Add event listener to new checkbox
+  
     const newCheckbox = tasksContainer.querySelector(`[data-id="${newTaskId}"] .task-checkbox`);
     newCheckbox.addEventListener('change', function() {
       const taskItem = this.closest('.task-item');
@@ -111,14 +111,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Tab functionality
+
   const tabTriggers = document.querySelectorAll('.tabs-trigger');
   
   tabTriggers.forEach(trigger => {
     trigger.addEventListener('click', function() {
       const tab = this.getAttribute('data-tab');
       
-      // Filter tasks based on tab
+
       const tasks = document.querySelectorAll('.task-item');
       
       tasks.forEach(task => {
@@ -130,11 +130,11 @@ document.addEventListener('DOMContentLoaded', function() {
             task.style.display = 'flex';
             break;
           case 'today':
-            // For demo purposes, show all tasks in "Today" tab
+        
             task.style.display = 'flex';
             break;
           case 'upcoming':
-            // For demo purposes, hide completed tasks in "Upcoming" tab
+           
             task.style.display = isCompleted ? 'none' : 'flex';
             break;
           case 'completed':
