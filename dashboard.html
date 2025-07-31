@@ -20,11 +20,10 @@
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // These IDs correspond to the service and template you created
+      
             const serviceID = 'service_zhum4dn';
             const templateID = 'template_8iauyas';
-            
-            // Send the email
+         
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     alert('Email sent successfully!');
@@ -248,14 +247,10 @@
 
     <script src="dashboard.js"></script>
     <script type="module">
-  // Import the functions you need from the SDKs you need
+ 
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyAk3671x1Q483d6AcV5huO6Nh3N7RoXFmQ",
     authDomain: "ai-automation-8dba0.firebaseapp.com",
@@ -266,7 +261,7 @@
     measurementId: "G-T9VB280TBM"
   };
 
-  // Initialize Firebase
+ 
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
